@@ -1,0 +1,40 @@
+<div class="m-3">
+    <h5>Edição de produtos</h5>
+    <p>Utilize o formulário para alterar os dados do produto.</p>
+    <hr />
+ 
+    <form>
+      <div class="row mb-2">
+        <div class="col">
+          <label>Nome do produto:</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col">
+          <label>Preço do produto:</label>
+          <input type="text" class="form-control" />
+        </div>
+        <div class="col">
+          <label>Quantidade do produto:</label>
+          <input type="number" min="0" class="form-control" />
+        </div>
+      </div>
+ 
+      <div class="row mb-2">
+        <div class="col">
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="Salvar Alterações"
+          />
+          &nbsp;
+          <a routerLink="/consulta-produtos" class="btn btn-light">
+              Ir para a consulta
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+ 
+
+
+

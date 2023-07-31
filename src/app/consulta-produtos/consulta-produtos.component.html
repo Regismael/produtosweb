@@ -1,0 +1,60 @@
+<div class="m-3">
+
+
+    <h5>Consulta de produtos</h5>
+    <p>Listagem de produtos cadastrados no sistema.</p>
+    <hr />
+ 
+    <div class="table-responsive">
+        <table class="table table-sm table-hover">
+            <thead>
+                <tr>
+                    <th>Nome do produto</th>
+                    <th>Preço</th>
+                    <th>Qtd</th>
+                    <th>Total</th>
+                    <th>Criado em</th>
+                    <th>Alterado em</th>
+                    <th>Operações</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr *ngFor="let item of produtos">
+
+
+                    <td>{{item.nome | uppercase}}</td>
+                    <td>{{item.preco | currency: 'R$ '}}</td>
+                    <td>{{item.quantidade}}</td>
+                    <td>{{item.total | currency: 'R$ '}}</td>
+                    <td>{{item.dataHoraCriacao | date: 'dd/MM/yyyy HH:mm'}}</td>
+                    <td>{{item.dataHoraUltimaAlteracao | date: 'dd/MM/yyyy HH:mm'}}</td>
+                    <td>
+                        <a routerLink="/edicao-produtos"
+                            class="btn btn-outline-primary btn-sm">
+                            Editar
+                        </a>
+                        &nbsp;
+                        <button class="btn btn-outline-danger btn-sm">
+                            Excluir
+                        </button>
+                    </td>
+                </tr>
+
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="7">
+                        Total de registros: {{produtos.length}}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+
+</div>
+
+
